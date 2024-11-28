@@ -1,0 +1,54 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
+
+/*public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> lista = new ArrayList<String>();
+        lista.add("José");
+        lista.add("Clara");
+        lista.add("Sara");
+
+        for(String nome:lista){
+            System.out.println(nome);
+        }
+
+    }
+}*/
+
+/*public class Main {
+    public static void main(String[] args) {
+        LocalDate data1 = LocalDate.now();
+        System.out.println(data1);
+
+        LocalDateTime date2 = LocalDateTime.now();
+        System.out.println(date2);
+
+        Instant date3 = Instant.now();
+        System.out.println(date3);
+
+
+
+
+    }
+}*/
+
+public class Main {
+    public static void main(String[] args) {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        Date data = null;
+        try {
+            data = sdf.parse("11-10-2023");
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println(data);
+        System.out.println(sdf.format(data));
+    }
+}
